@@ -1,82 +1,316 @@
-&lt;div align="center"&gt;
-  &lt;br /&gt;
-    &lt;img src="https://img.shields.io/badge/-React.JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" /&gt;
-    &lt;img src="https://img.shields.io/badge/-Node.JS-black?style=for-the-badge&logoColor=white&logo=nodedotjs&color=339933" alt="node.js" /&gt;
-    &lt;img src="https://img.shields.io/badge/-MongoDB-black?style=for-the-badge&logoColor=white&logo=mongodb&color=47A248" alt="mongodb" /&gt;
-    &lt;img src="https://img.shields.io/badge/-Express.JS-black?style=for-the-badge&logoColor=white&logo=express&color=000000" alt="express.js" /&gt;
-    &lt;img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" /&gt;
-    &lt;img src="https://img.shields.io/badge/-WhatsApp-black?style=for-the-badge&logoColor=white&logo=whatsapp&color=25D366" alt="whatsapp" /&gt;
-  &lt;br /&gt;
+# 🌸 Smart Flower Market
 
-  &lt;h3 align="center"&gt;Smart Flower Market: A digital platform for flower market transactions with automated pricing and WhatsApp notifications&lt;/h3&gt;
-&lt;/div&gt;
+<div align="center">
 
-## 📋 &lt;a name="table"&gt;Table of Contents&lt;/a&gt;
+![React](https://img.shields.io/badge/React.JS-61DAFB?style=for-the-badge\&logo=react\&logoColor=black)
+![Node](https://img.shields.io/badge/Node.JS-339933?style=for-the-badge\&logo=nodedotjs\&logoColor=white)
+![Express](https://img.shields.io/badge/Express.JS-000000?style=for-the-badge\&logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge\&logo=mongodb\&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge\&logo=tailwindcss)
+![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge\&logo=whatsapp)
 
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Snippets (Code to Copy)](#snippets)
-6. 🔗 [Assets](#links)
-7. 🚀 [More](#more)
+### Smart Flower Market – Digital platform for flower market transactions with automated pricing and WhatsApp notifications
 
-## &lt;a name="introduction"&gt;🤖 Introduction&lt;/a&gt;
+</div>
 
-Built with the MERN stack (MongoDB, Express.js, React, Node.js) and styled with TailwindCSS, Smart Flower Market is a comprehensive platform designed to digitize flower market operations. The platform connects farmers, buyers, and administrators with real-time transaction management, automated pricing with commission handling, and instant WhatsApp notifications in Telugu.
+---
 
-The system supports two transaction types: direct purchases (0% commission) and resale transactions (5% commission), with automated data archival to maintain database performance.
+# 📋 Table of Contents
 
-## &lt;a name="tech-stack"&gt;⚙️ Tech Stack&lt;/a&gt;
+1. Introduction
+2. System Architecture
+3. Tech Stack
+4. Features
+5. Project Workflow
+6. Quick Start
+7. Environment Variables
+8. Screenshots
+9. Future Improvements
+10. Author
 
-- **Frontend**: React.js 18, Tailwind CSS, Font Awesome
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB with Mongoose ODM
-- **Authentication**: JWT (JSON Web Tokens)
-- **Notifications**: WhatsApp Web (wa.me links) - Telugu only
-- **Scheduling**: node-cron for automated tasks
-- **State Management**: React Context API
-- **HTTP Client**: Axios
+---
 
-## &lt;a name="features"&gt;🔋 Features&lt;/a&gt;
+# 🤖 Introduction
 
-👉 **Multi-Role Authentication**: Secure login system for Admin, Farmer, and Buyer roles with JWT tokens
+**Smart Flower Market** is a full-stack MERN application designed to digitize traditional flower market operations.
 
-👉 **Transaction Management**: 
-- Direct Purchase: Farmer → Buyer (0% commission)
-- Resale: Farmer → Seller → Buyer (5% commission from farmer)
+The platform connects **farmers, buyers, and administrators** and automates:
 
-👉 **Automated Pricing System**: Set market prices and auto-apply to pending transactions with commission calculations
+* flower market transactions
+* commission calculations
+* price fixing
+* settlement tracking
+* WhatsApp notifications
 
-👉 **WhatsApp Integration**: Instant Telugu notifications to all parties with price status (fixed/pending)
+The system eliminates manual bookkeeping and enables **real-time transaction management with automated pricing.**
 
-👉 **Weight Input**: Auto-scale simulation with manual entry option and stability detection
+---
 
-👉 **Data Archival**: Automatic cleanup of 10+ day old transactions with 24-hour emergency undo window
+# 🏗 System Architecture
 
-👉 **Multi-Language UI**: Telugu (primary), Hindi, and English interface support
+```
+Farmers / Buyers / Admin
+        │
+        ▼
+   React Frontend (UI)
+        │
+        ▼
+ Node.js + Express Backend
+        │
+        ▼
+      MongoDB Database
+        │
+        ▼
+ WhatsApp Notification Service
+```
 
-👉 **Real-time Dashboard**: Live statistics, farmer-wise transaction grouping, settlement reports
+---
 
-👉 **Responsive Design**: Fully responsive interface for desktop and mobile devices
+# ⚙️ Tech Stack
 
-and many more, including farmer settlement calculations, bulk price fixing, and transaction history tracking
+## Frontend
 
-## &lt;a name="quick-start"&gt;🤸 Quick Start&lt;/a&gt;
+* React.js
+* Tailwind CSS
+* Axios
+* React Context API
+* Font Awesome
 
-Follow these steps to set up the project locally on your machine.
+## Backend
 
-**Prerequisites**
+* Node.js
+* Express.js
+* JWT Authentication
+* Node-Cron (automation tasks)
 
-Make sure you have the following installed on your machine:
+## Database
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en) (v18.0.0 or higher)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
-- [MongoDB](https://www.mongodb.com/) (v4.4 or higher)
+* MongoDB
+* Mongoose ODM
 
-**Cloning the Repository**
+## Notifications
 
-```bash
+* WhatsApp Web Links (`wa.me`)
+
+---
+
+# 🔋 Features
+
+## 🔐 Multi-Role Authentication
+
+Secure login system using **JWT tokens** supporting three roles:
+
+* Admin
+* Farmer
+* Buyer
+
+Each role has different permissions and dashboards.
+
+---
+
+## 💰 Transaction Management
+
+Two types of transactions are supported.
+
+### Direct Purchase
+
+```
+Farmer → Buyer
+Commission: 0%
+```
+
+### Resale Transaction
+
+```
+Farmer → Seller → Buyer
+Commission: 5% from farmer
+```
+
+---
+
+## 📊 Automated Pricing System
+
+Admin can set **daily market price**.
+
+The system automatically:
+
+* updates pending transactions
+* calculates commission
+* generates settlement reports
+
+---
+
+## 📩 WhatsApp Notifications
+
+Automatic **Telugu WhatsApp notifications** are sent to:
+
+* farmers
+* buyers
+* sellers
+
+Messages include:
+
+* price fixed notifications
+* pending price alerts
+* settlement details
+
+---
+
+## ⚖ Weight Input System
+
+Supports:
+
+* manual weight entry
+* auto-scale simulation
+* stability detection for accurate weight
+
+---
+
+## 🗃 Data Archival System
+
+To maintain database performance:
+
+* transactions older than **10 days are archived**
+* system allows **24-hour restore window**
+
+---
+
+## 📊 Real-Time Dashboard
+
+Admin dashboard shows:
+
+* daily transactions
+* farmer-wise reports
+* pending settlements
+* commission statistics
+
+---
+
+## 🌐 Multi-Language Support
+
+User interface supports:
+
+* Telugu (primary)
+* Hindi
+* English
+
+---
+
+# 🔄 Project Workflow
+
+1. Farmer brings flowers to market
+2. Weight of flowers is recorded
+3. Transaction is created in the system
+4. Admin fixes market price later
+5. System automatically calculates commission
+6. WhatsApp notifications are sent
+7. Settlement reports are generated
+
+---
+
+# 🤸 Quick Start
+
+## 1️⃣ Clone Repository
+
+```
 git clone https://github.com/mohanmalepati135/Flower-Market-Management-System.git
 cd Flower-Market-Management-System
+```
+
+---
+
+## 2️⃣ Install Dependencies
+
+Backend
+
+```
+cd server
+npm install
+```
+
+Frontend
+
+```
+cd client
+npm install
+```
+
+---
+
+## 3️⃣ Run Application
+
+Start backend server
+
+```
+npm start
+```
+
+Start frontend
+
+```
+npm start
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create a `.env` file inside the **server folder**.
+
+```
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+---
+
+# 📸 Screenshots
+
+You can add screenshots like:
+
+* Admin dashboard
+* Transaction entry page
+* Farmer settlement report
+* WhatsApp notification example
+
+Example:
+
+```
+/screenshots/dashboard.png
+/screenshots/transactions.png
+/screenshots/settlement.png
+```
+
+---
+
+# 🚀 Future Improvements
+
+Possible upgrades:
+
+* IoT weighing scale integration
+* AI-based flower price prediction
+* Digital payments (Razorpay / UPI)
+* Mobile application (React Native)
+* Advanced analytics dashboard
+
+---
+
+# 👨‍💻 Author
+
+**Sreenivasa Mohan Malepati**
+
+GitHub
+https://github.com/mohanmalepati135
+
+LinkedIn
+(Add your LinkedIn profile here)
+
+---
+
+# ⭐ Support
+
+If you find this project useful, please consider giving it a **⭐ on GitHub**.
+
+---
+
