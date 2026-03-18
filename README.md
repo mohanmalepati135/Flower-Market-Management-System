@@ -265,24 +265,7 @@ JWT_SECRET=your_secret_key
 
 ---
 
-# 📸 Screenshots
 
-You can add screenshots like:
-
-* Admin dashboard
-* Transaction entry page
-* Farmer settlement report
-* WhatsApp notification example
-
-Example:
-
-```
-/screenshots/dashboard.png
-/screenshots/transactions.png
-/screenshots/settlement.png
-```
-
----
 
 # 🚀 Future Improvements
 
@@ -303,8 +286,6 @@ Possible upgrades:
 GitHub
 https://github.com/mohanmalepati135
 
-LinkedIn
-(Add your LinkedIn profile here)
 
 ---
 
